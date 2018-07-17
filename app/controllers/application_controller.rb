@@ -14,7 +14,7 @@ class App < Sinatra::Base
       @hero_name= params[:team][:members][0][:name]
       @hero_power= params[:team][:members][0][:power]
       @hero_bio = params[:team][:members][0][:bio]
-      
+
 
 
 
