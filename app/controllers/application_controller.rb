@@ -14,12 +14,13 @@ class App < Sinatra::Base
       @hero1_name= []
       @hero1_power= []
       @hero1_bio = []
-      @hero2_name=params[:team][:members][1][:name]
-      @hero2_power= params[:team][:members][1][:power]
-      @hero2_bio= params[:team][:members][1][:bio]
-      @hero3_name= params[:team][:members][2][:name]
-      @hero3_power= params[:team][:members][2][:power]
-      @hero3_bio= params[:team][:members][2][:bio]
+      @team_members = params[:team][:members]
+      @team_members.each do |hero|
+        @hero_name << hero[:name] 
+        @hero_power <<hero[:power] 
+        @hero_bio << hero[:bio] 
+      end 
+       
 
 
 
