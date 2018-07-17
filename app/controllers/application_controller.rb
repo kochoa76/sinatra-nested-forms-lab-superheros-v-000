@@ -11,7 +11,7 @@ class App < Sinatra::Base
     post '/team' do
       @team_name = params[:team][:name]
       binding.pry
-      
+
 
       erb :team
     end
